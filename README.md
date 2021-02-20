@@ -1,3 +1,10 @@
+# Hackverse 2.0 Instructions
+
+to run it, clone the repository using git clone 
+cd fithack
+npm install
+npm install react-router-dom
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
