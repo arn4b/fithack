@@ -31,6 +31,7 @@ function App() {
       <Signup />
       <Footer />
       </BrowserRouter>
+      //This comment is to check the integrity of git
     </div>
   );
 }
