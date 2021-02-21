@@ -1,37 +1,22 @@
 import React from 'react';
-import {Link, Route, BrowserRouter, Switch} from "react-router-dom"
+import {Route, BrowserRouter} from "react-router-dom"
 import Navbar from "./Widgets/Navbar";
 import Footer from "./Widgets/Footer";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import DashBoard from "./Pages/DashBoard";
 import './App.css';
 
-const Routing = () => {
-  return(
-    <Switch>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/signup">
-        <Signup />
-      </Route>
-    </Switch>
-  )
-}
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar/>
-      <div>
-        <h1 align="center">Hello</h1>
-      </div>
-      <Routing />
-      <Login />
-      <Signup />
-      <Footer />
-      </BrowserRouter>
-      //This comment is to check the integrity of git
+        <Navbar/>
+        <Route path="/" exact component={DashBoard}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/signup" component={Signup}/>
+       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
