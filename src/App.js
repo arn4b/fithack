@@ -1,5 +1,6 @@
 import React from 'react';
-import {Route, BrowserRouter} from "react-router-dom"
+import {Route, BrowserRouter} from "react-router-dom";
+import styled from 'styled-components';
 import Navbar from "./Widgets/Navbar";
 import Footer from "./Widgets/Footer";
 import Login from "./Pages/Login";
@@ -12,7 +13,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar/>
-        <Route path="/" exact component={DashBoard}/>
+        <Route path="/" exact component={DashBoard}/>       
+       
         <Route path="/login" component={Login}/>
         <Route path="/signup" component={Signup}/>
        </BrowserRouter>
