@@ -1,17 +1,22 @@
 export const MenuItem = [
     {
+        title: 'DashBoard',
+        url: '/',
+        cName: 'nav-links'
+    },
+    {
         title: 'About',
-        url: '#',
+        url: '/about',
         cName: 'nav-links'
     },
    {
         title: 'Login',
-        url: '#',
+        url: '/login',
         cName: 'nav-links'
     },   
     {
         title: 'SignUp',
-        url: '#',
+        url: '/signup',
         cName: 'nav-links-mobile'
     },
 ]

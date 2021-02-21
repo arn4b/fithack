@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {NavLink,Link} from 'react-router-dom';
 import{MenuItem} from "./MenuItem"
 import './Navbar.css'
 import {Button} from "./Button"
@@ -18,15 +19,19 @@ class Navbar extends Component {
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItem.map((item, index) => {
+                        {MenuItem.map((item, index) => {
                         return(
-                            <li key={index}><a className={item.cName} href={item.url}>
-                                {item.title}
-                            </a></li>
+                            <li key={index}>
+                                <NavLink className={`${item.cName} ${item.active}`} exact to={item.url}>
+                                    {item.title}
+                                </NavLink>
+                            </li>
                         )
-                    })}                    
+                    })}          
                 </ul>
-                <Button>SignUp</Button>
+                <Link to="/signup">
+                <Button >SignUp</Button>
+                </Link>
             </nav>
         )
     }
